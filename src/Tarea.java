@@ -1,30 +1,30 @@
 public class Tarea {
     // Variables globales para almacenar el nombre y cantidad del artículo
-    private static String nombreArticulo = null;
-    private static int cantidadArticulo = 0;
+    private static String nombreTarea = null;
+    private static int cantidadTarea = 0;
 
     public static void agregarTarea(String nombre, int cantidad) {
-        nombreArticulo = nombre;
-        cantidadArticulo = cantidad;
+        nombreTarea = nombre;
+        cantidadTarea = cantidad;
     }
 
     public static void eliminarTarea(String nombre) {
-        if (nombreArticulo != null && nombreArticulo.equals(nombre)) {
-            nombreArticulo = null;
-            cantidadArticulo = 0;
+        if (nombreTarea != null && nombreTarea.equals(nombre)) {
+            nombreTarea = null;
+            cantidadTarea = 0;
         }
     }
 
     public static String obtenerTarea() {
-        if (nombreArticulo == null) {
-            return "Inventario vacío";
+        if (nombreTarea == null) {
+            return "Sin Tarea";
         }
-        return "Artículo: " + nombreArticulo + ", Cantidad: " + cantidadArticulo;
+        return "Tarea: " + nombreTarea + ", Prioridad: " + cantidadTarea;
     }
 
     public static void actualizarPrioridad(String nombre, int nuevaCantidad) {
-        if (nombreArticulo != null && nombreArticulo.equals(nombre)) {
-            cantidadArticulo = nuevaCantidad;
+        if (nombreTarea != null && nombreTarea.equals(nombre)) {
+            cantidadTarea = nuevaCantidad;
         }
     }
 }

@@ -5,25 +5,25 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TareaTest {
     @Before
     public void setUp() {
-        Tarea.agregarTarea("Manzanas", 50);
+        Tarea.agregarTarea("Tarea 1", 50);
     }
     @Test
     public void testAgregarTarea() {
-        Tarea.agregarTarea("Peras", 30);
-        assertEquals("Artículo: Peras, Cantidad: 30", Tarea.obtenerTarea());
+        Tarea.agregarTarea("Tarea 2", 30);
+        assertEquals("Tarea: Tarea 2, Prioridad: 30", Tarea.obtenerTarea());
     }
     @Test
     public void testEliminarTarea() {
-        Tarea.eliminarTarea("Manzanas");
-        assertEquals("Inventario vacío", Tarea.obtenerTarea());
+        Tarea.eliminarTarea("Tarea 1");
+        assertEquals("Sin Tarea", Tarea.obtenerTarea());
     }
     @Test
     public void testObtenerTarea() {
-        assertEquals("Artículo: Manzanas, Cantidad: 50", Tarea.obtenerTarea());
+        assertEquals("Tarea: Tarea 1, Prioridad: 50", Tarea.obtenerTarea());
     }
     @Test
     public void testActualizarCantidad() {
-        Tarea.actualizarPrioridad("Manzanas", 30);
-        assertEquals("Artículo: Manzanas, Cantidad: 30", Tarea.obtenerTarea());
+        Tarea.actualizarPrioridad("Tarea 1", 30);
+        assertEquals("Tarea: Tarea 1, Prioridad: 30", Tarea.obtenerTarea());
     }
 }
