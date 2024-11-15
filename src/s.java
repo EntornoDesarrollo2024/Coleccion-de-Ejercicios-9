@@ -1,4 +1,4 @@
-class Usuarios {
+class LoginSimple {
 
     private static final String usuario1 = "usuario1";
     private static final String contrasena1 = "contrasena123";
